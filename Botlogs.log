@@ -666,3 +666,211 @@ aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified 
 06/17/2023 08:54:56 PM UTC Start polling.
 06/17/2023 08:57:13 PM UTC Bot: РџС–РґР±С–СЂРєР° С‚Р°СЂРёС„С–РІ Lifecell [@LifecellRecBot]
 06/17/2023 08:57:13 PM UTC Start polling.
+06/18/2023 12:04:02 AM Фінляндія (літо) Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/18/2023 12:04:02 AM Фінляндія (літо) Start polling.
+06/18/2023 12:05:27 AM Фінляндія (літо) Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/18/2023 12:05:27 AM Фінляндія (літо) Start polling.
+06/18/2023 12:05:33 AM Фінляндія (літо) Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py:409> exception=NameError("name 'result' is not defined")>
+Traceback (most recent call last):
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 417, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 238, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 286, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artem\Файли\Python код\Bot\main.py", line 31, in handler
+    if i < len(result):
+               ^^^^^^
+NameError: name 'result' is not defined
+06/18/2023 12:05:49 AM Фінляндія (літо) Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/18/2023 12:05:49 AM Фінляндія (літо) Start polling.
+06/18/2023 12:06:04 AM Фінляндія (літо) Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py:409> exception=NameError("name 'result' is not defined")>
+Traceback (most recent call last):
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 417, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 238, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 286, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artem\Файли\Python код\Bot\main.py", line 31, in handler
+    if i < len(result):
+               ^^^^^^
+NameError: name 'result' is not defined
+06/18/2023 12:06:14 AM Фінляндія (літо) Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<Dispatcher._process_polling_updates() done, defined at D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py:409> exception=NameError("name 'result' is not defined")>
+Traceback (most recent call last):
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 417, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 238, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 286, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artem\Файли\Python код\Bot\main.py", line 38, in handler
+    await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+                                                       ^^^^^^
+NameError: name 'result' is not defined
+06/18/2023 12:07:18 AM Фінляндія (літо) Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/18/2023 12:07:18 AM Фінляндія (літо) Start polling.
+06/18/2023 12:07:33 AM Фінляндія (літо) Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py:409> exception=NameError("name 'result' is not defined")>
+Traceback (most recent call last):
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 417, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 238, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 286, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artem\Файли\Python код\Bot\main.py", line 31, in handler
+    if i > len(result):
+               ^^^^^^
+NameError: name 'result' is not defined
+06/18/2023 12:08:14 AM Фінляндія (літо) Task exception was never retrieved
+future: <Task finished name='Task-58' coro=<Dispatcher._process_polling_updates() done, defined at D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py:409> exception=IndexError('list index out of range')>
+Traceback (most recent call last):
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 417, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 238, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 286, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artem\Файли\Python код\Bot\main.py", line 42, in handler
+    await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+                                                       ~~~~~~^^^
+IndexError: list index out of range
+06/18/2023 12:08:15 AM Фінляндія (літо) Task exception was never retrieved
+future: <Task finished name='Task-61' coro=<Dispatcher._process_polling_updates() done, defined at D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py:409> exception=MessageNotModified('Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message')>
+Traceback (most recent call last):
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 417, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 238, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 286, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artem\Файли\Python код\Bot\main.py", line 34, in handler
+    await  bot.edit_message_text(text=f"Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\bot\bot.py", line 2411, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\bot\base.py", line 208, in request
+    return await api.make_request(self.session, self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+06/18/2023 12:08:17 AM Фінляндія (літо) Task exception was never retrieved
+future: <Task finished name='Task-73' coro=<Dispatcher._process_polling_updates() done, defined at D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py:409> exception=IndexError('list index out of range')>
+Traceback (most recent call last):
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 417, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 238, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 286, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artem\Файли\Python код\Bot\main.py", line 42, in handler
+    await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+                                                       ~~~~~~^^^
+IndexError: list index out of range
+06/18/2023 12:08:20 AM Фінляндія (літо) Task exception was never retrieved
+future: <Task finished name='Task-76' coro=<Dispatcher._process_polling_updates() done, defined at D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py:409> exception=MessageNotModified('Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message')>
+Traceback (most recent call last):
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 417, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 238, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 286, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Artem\Файли\Python код\Bot\main.py", line 34, in handler
+    await  bot.edit_message_text(text=f"Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\bot\bot.py", line 2411, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\bot\base.py", line 208, in request
+    return await api.make_request(self.session, self.server, self.__token, method, data, files,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\INSTALL\Python\Lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message

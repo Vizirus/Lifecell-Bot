@@ -28,16 +28,18 @@ async def handler(call: types.CallbackQuery):
   global i
   if call.data == "NextClick":
     i += 1 
-    if i < len(result):
-      await  bot.edit_message_text(text=f"Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
     if i > len(result):
       i = 0
+    if i < len(result):
+      await  bot.edit_message_text(text=f"Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+   
   elif call.data=="PreviousClick":
     i -= 1
-    if i >= 0:
-      await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
     if i < 0:
       i = len(result)
+    if i >= 0:
+      await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+    
 @Disp.message_handler(commands=["start"])
 async def echo_test(message: types.Message):
   keyboardLine = InlineKeyboardMarkup().add(AllTarif, ChooseTarif)

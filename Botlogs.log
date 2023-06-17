@@ -1,0 +1,668 @@
+06/17/2023 07:32:13 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 07:32:13 PM UTC Start polling.
+06/17/2023 07:32:14 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=NameError("name 'result' is not defined")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 50, in handler
+    if i < len(result):
+NameError: name 'result' is not defined
+06/17/2023 07:32:19 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=OperationalError('no such column: Priceq')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 42, in callBack
+    result = sortClass.SortByPrice()
+  File "/home/runner/TurboTurtles-bot/Sorting.py", line 7, in SortByPrice
+    self.executor.execute("SELECT * from TarifBase ORDER BY Priceq")
+sqlite3.OperationalError: no such column: Priceq
+06/17/2023 07:32:36 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 07:32:36 PM UTC Start polling.
+06/17/2023 07:33:05 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-79' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageNotModified('Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 57, in handler
+    await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 3122, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+06/17/2023 07:36:48 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 07:36:48 PM UTC Start polling.
+06/17/2023 07:37:21 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-76' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageNotModified('Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 57, in handler
+    await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 3122, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+06/17/2023 07:37:46 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 07:37:46 PM UTC Start polling.
+06/17/2023 07:38:15 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-86' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageNotModified('Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 51, in handler
+    await  bot.edit_message_text(text=f"Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 3122, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+06/17/2023 07:39:19 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 07:39:19 PM UTC Start polling.
+06/17/2023 07:43:32 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 07:43:32 PM UTC Start polling.
+06/17/2023 08:10:06 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:10:06 PM UTC Start polling.
+06/17/2023 08:13:03 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:13:03 PM UTC Start polling.
+06/17/2023 08:13:46 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:13:46 PM UTC Start polling.
+06/17/2023 08:15:42 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:15:42 PM UTC Start polling.
+06/17/2023 08:16:55 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:16:55 PM UTC Start polling.
+06/17/2023 08:17:05 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-15' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=NameError("name 'message' is not defined")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 51, in callBack
+    if message.text=="Так":
+NameError: name 'message' is not defined
+06/17/2023 08:18:11 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:18:11 PM UTC Start polling.
+06/17/2023 08:18:45 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:18:45 PM UTC Start polling.
+06/17/2023 08:18:46 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=ValueError("invalid literal for int() with base 10: 'Ні'")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 59, in YesNo
+    Internet = str(round(200/1024, 1) * int(message.text))
+ValueError: invalid literal for int() with base 10: 'Ні'
+06/17/2023 08:18:48 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=NameError("name 'allMarkup' is not defined")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 82, in YesNo
+    await message.answer(f"Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}", reply_markup=allMarkup)
+NameError: name 'allMarkup' is not defined
+06/17/2023 08:20:20 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:20:20 PM UTC Start polling.
+06/17/2023 08:20:41 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:20:41 PM UTC Start polling.
+06/17/2023 08:23:34 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:23:34 PM UTC Start polling.
+06/17/2023 08:23:35 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=ValueError("invalid literal for int() with base 10: 'Ні'")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 59, in YesNo
+    Internet = str(round(200/1024, 1) * int(message.text))
+ValueError: invalid literal for int() with base 10: 'Ні'
+06/17/2023 08:29:58 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:29:58 PM UTC Start polling.
+06/17/2023 08:29:59 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=IndexError('list index out of range')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 62, in YesNo
+    result = sortClass.SortByUser(UserData[0], UserData[1], UserData[2], UserData[3])
+IndexError: list index out of range
+06/17/2023 08:30:26 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:30:26 PM UTC Start polling.
+06/17/2023 08:30:26 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=IndexError('list index out of range')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 63, in YesNo
+    result = sortClass.SortByUser(UserData[0], UserData[1], UserData[2], UserData[3])
+IndexError: list index out of range
+06/17/2023 08:31:25 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:31:25 PM UTC Start polling.
+06/17/2023 08:32:46 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:32:46 PM UTC Start polling.
+06/17/2023 08:32:46 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=IndexError('list index out of range')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 63, in YesNo
+    result = sortClass.SortByUser(UserData[0], UserData[1], UserData[2], UserData[3])
+IndexError: list index out of range
+06/17/2023 08:36:16 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:36:16 PM UTC Start polling.
+06/17/2023 08:36:26 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 58, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:37:09 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:37:09 PM UTC Start polling.
+06/17/2023 08:37:21 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 57, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:38:22 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:38:22 PM UTC Start polling.
+06/17/2023 08:38:25 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=NameError("name 'result' is not defined")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 72, in handler
+    if i < len(result):
+NameError: name 'result' is not defined
+06/17/2023 08:38:26 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=NameError("name 'result' is not defined")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 79, in handler
+    await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+NameError: name 'result' is not defined
+06/17/2023 08:38:31 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 57, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:39:07 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 57, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:40:04 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:40:04 PM UTC Start polling.
+06/17/2023 08:40:09 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 58, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:40:52 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:40:52 PM UTC Start polling.
+06/17/2023 08:40:53 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 58, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:41:10 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:41:10 PM UTC Start polling.
+06/17/2023 08:41:11 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 58, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:41:39 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:41:39 PM UTC Start polling.
+06/17/2023 08:41:42 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 57, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:42:21 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:42:21 PM UTC Start polling.
+06/17/2023 08:42:22 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 58, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:45:36 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:45:36 PM UTC Start polling.
+06/17/2023 08:45:38 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageTextIsEmpty('Message text is empty')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 58, in YesNo
+    await message.answer("")
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/types/message.py", line 438, in answer
+    return await self.bot.send_message(
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageTextIsEmpty: Message text is empty
+06/17/2023 08:46:45 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:46:45 PM UTC Start polling.
+06/17/2023 08:46:47 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=TypeError("'in <string>' requires string as left operand, not list")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 58, in YesNo
+    print(alphabet in message.text)
+TypeError: 'in <string>' requires string as left operand, not list
+06/17/2023 08:47:16 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:47:16 PM UTC Start polling.
+06/17/2023 08:47:16 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=TypeError("'in <string>' requires string as left operand, not list")>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 58, in YesNo
+    print(alphabet in message.text)
+TypeError: 'in <string>' requires string as left operand, not list
+06/17/2023 08:50:17 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:50:17 PM UTC Start polling.
+06/17/2023 08:52:03 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:52:03 PM UTC Start polling.
+06/17/2023 08:52:51 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:52:51 PM UTC Start polling.
+06/17/2023 08:53:46 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:53:46 PM UTC Start polling.
+06/17/2023 08:54:05 PM UTC Task exception was never retrieved
+future: <Task finished name='Task-40' coro=<Dispatcher._process_polling_updates() done, defined at /home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py:407> exception=MessageNotModified('Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message')>
+Traceback (most recent call last):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "main.py", line 71, in handler
+    await bot.edit_message_text(text=f" Назва тарифу: {result[i][0]} \n Ціна тарифу: {result[i][1]} \n Кількість Інтернету {result[i][2]} \n Кількість хвилин на дзвінки: {result[i][3]} \n Опис тарифу: {result[i][4]} \n Кількість хвилин на інші оператори: {result[i][5]} \n Посилання на сайт для активації: {result[i][6]}",chat_id=call.message.chat.id , message_id=call.message.message_id,  reply_markup=allMarkup)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/bot.py", line 3122, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/home/runner/TurboTurtles-bot/venv/lib/python3.10/site-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.MessageNotModified: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+06/17/2023 08:54:56 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:54:56 PM UTC Start polling.
+06/17/2023 08:57:13 PM UTC Bot: Підбірка тарифів Lifecell [@LifecellRecBot]
+06/17/2023 08:57:13 PM UTC Start polling.
